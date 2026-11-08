@@ -1,0 +1,41 @@
+{
+  "types": {
+    "tribe":   {"label": "Племя", "prefix": "Племя", "camp": "village", "base_rel": 0, "intrude": 15, "raids": true,
+                "names": ["Серого Ворона", "Красной Реки", "Белого Лиса", "Тихого Ручья", "Каменной Совы", "Высокой Сосны"],
+                "colors": [[200, 60, 50], [60, 120, 200], [230, 200, 70], [140, 70, 180], [60, 170, 120], [230, 130, 40]],
+                "roles": ["chief", "hunter", "hunter", "archer", "archer"], "cause": "аборигенов", "likes": {"necklace": 1.5}},
+    "bandits": {"label": "Банда", "prefix": "Банда", "camp": "fort", "base_rel": -15, "intrude": 6, "raids": true,
+                "names": ["Чёрного Ножа", "Ржавых Псов", "Мёртвой Головы"],
+                "colors": [[150, 40, 40], [90, 90, 100], [40, 40, 40]],
+                "roles": ["boss", "gunner", "gunner", "brute", "brute"], "cause": "бандитов", "likes": {"ammo": 2, "iron": 1.5, "gunpowder": 1.5}},
+    "traders": {"label": "Торговцы", "prefix": "Торговцы", "camp": "post", "base_rel": 30, "intrude": 0, "raids": false,
+                "names": ["Вольной Тропы", "Медного Колеса"],
+                "colors": [[210, 175, 80], [90, 160, 180]],
+                "roles": ["trader", "guard", "guard"], "cause": "торговцев", "likes": {"cloth": 1.5, "hide": 1.2}},
+    "cult":    {"label": "Культ", "prefix": "Культ", "camp": "shrine", "base_rel": -30, "intrude": 8, "raids": true,
+                "names": ["Пепла", "Серой Луны"],
+                "colors": [[150, 150, 155], [110, 60, 140]],
+                "roles": ["priest", "zealot", "zealot", "zealot"], "cause": "культистов", "likes": {"essence": 3, "coal": 2, "toadstool": 3}},
+    "survivors": {"label": "Выжившие", "prefix": "Выжившие с", "camp": "wreck", "base_rel": 25, "intrude": 0, "raids": false,
+                "names": ["«Альбатроса»", "рейса 714", "«Северной звезды»", "«Пеликана»", "борта Н-27"],
+                "colors": [[230, 120, 40], [70, 140, 210], [230, 210, 60]],
+                "roles": ["survivor", "survivor", "survivor"], "cause": "выживших", "likes": {"medkit": 2, "canned": 1.5, "bandage": 2}}
+  },
+  "roles": {
+    "chief":    {"name": "Вождь",    "hp": 50, "dmg": [13, 18], "weapon": "spear"},
+    "hunter":   {"name": "Охотник",  "hp": 30, "dmg": [9, 14],  "weapon": "spear"},
+    "archer":   {"name": "Лучник",   "hp": 26, "dmg": [6, 8],   "weapon": "bow",
+                 "ranged": {"dmg": 8, "range": 9, "cd": 1.8, "speed": 520, "kind": "arrow"}},
+    "boss":     {"name": "Главарь",  "hp": 70, "dmg": [10, 14], "weapon": "shotgun",
+                 "ranged": {"dmg": 8, "range": 6, "cd": 2.2, "speed": 900, "pellets": 4, "spread": 0.25, "life": 0.4, "kind": "pellet"}},
+    "gunner":   {"name": "Стрелок",  "hp": 34, "dmg": [6, 9],   "weapon": "pistol",
+                 "ranged": {"dmg": 12, "range": 10, "cd": 1.7, "speed": 1100, "kind": "bullet"}},
+    "brute":    {"name": "Громила",  "hp": 48, "dmg": [12, 18], "weapon": "machete"},
+    "trader":   {"name": "Торговец", "hp": 40, "dmg": [6, 10],  "weapon": "club"},
+    "guard":    {"name": "Охранник", "hp": 50, "dmg": [8, 10],  "weapon": "crossbow",
+                 "ranged": {"dmg": 16, "range": 10, "cd": 2.2, "speed": 800, "kind": "bolt"}},
+    "priest":   {"name": "Жрец",     "hp": 40, "dmg": [8, 12],  "weapon": "torch", "ignite": true},
+    "zealot":   {"name": "Фанатик",  "hp": 30, "dmg": [9, 13],  "weapon": "torch", "ignite": true},
+    "survivor": {"name": "Выживший", "hp": 40, "dmg": [6, 10],  "weapon": "knife"}
+  }
+}
