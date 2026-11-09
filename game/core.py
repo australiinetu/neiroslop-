@@ -2621,6 +2621,7 @@ class GameLogic:
             return False
         self.world, self.player, self.animals = w, player, animals
         self.flag = None
+        self.spoil_acc = {}                      # нет в сохранениях до v1.6 — иначе AttributeError
         self.new_story()
         for k, v in game.items():
             setattr(self, k, v)
